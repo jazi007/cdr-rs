@@ -734,7 +734,7 @@ fn test_enum() {
         Three,
     }
 
-    check(vec![E::One, E::Two, E::Three], Some(4 + 4 * 3));
+    check(vec![E::One, E::Two, E::Three], Some(4 + 3));
     check(
         vec![E::One as u32, E::Two as u32, E::Three as u32],
         Some(4 + 4 * 3),

@@ -333,7 +333,7 @@ where
             where
                 V: de::DeserializeSeed<'de>,
             {
-                let idx: u32 = de::Deserialize::deserialize(&mut *self)?;
+                let idx: u8 = de::Deserialize::deserialize(&mut *self)?;
                 let val: Result<_> = seed.deserialize(idx.into_deserializer());
                 Ok((val?, self))
             }

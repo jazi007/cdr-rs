@@ -195,7 +195,7 @@ where
         variant_index: u32,
         _variant: &'static str,
     ) -> Result<Self::Ok> {
-        self.serialize_u32(variant_index)
+        self.serialize_u8(variant_index as u8)
     }
 
     fn serialize_newtype_struct<T>(self, _name: &'static str, value: &T) -> Result<Self::Ok>
